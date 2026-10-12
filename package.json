@@ -1,0 +1,41 @@
+{
+  "name": "automation-test-store-tests",
+  "version": "1.0.0",
+  "description": "Test automation project for Automation Test Store (TestCafe + TypeScript)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+  "test:edge": "testcafe edge tests/specs",
+  "test:headless": "testcafe edge:headless tests/specs",
+  "test": "testcafe",
+  "lint": "eslint . --ext .ts",
+  "lint:fix": "eslint . --ext .ts --fix"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksushaf7255/automation-test-store-tests.git"
+  },
+  "keywords": [],
+  "author": "ksushaf7255",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ksushaf7255/automation-test-store-tests/issues"
+  },
+  "homepage": "https://github.com/ksushaf7255/automation-test-store-tests#readme",
+  "dependencies": {
+    "testcafe": "^3.7.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "@typescript-eslint/eslint-plugin": "^8.71.1",
+    "@typescript-eslint/parser": "^8.71.1",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

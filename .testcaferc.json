@@ -1,0 +1,13 @@
+{
+  "browsers": ["edge"],
+  "src": "tests/specs/**/*.ts",
+  "reporter": {
+    "name": "spec"
+  },
+  "screenshots": {
+    "path": "screenshots",
+    "takeOnFails": true
+  },
+  "selectorTimeout": 10000,
+  "assertionTimeout": 10000
+}
