@@ -24,8 +24,7 @@ export default class RegisterPage extends BasePage {
   readonly passwordConfirmInput = Selector('#AccountFrm_confirm');
   readonly privacyCheckbox = Selector('#AccountFrm_agree');
   readonly submitButton = Selector('button[title="Continue"]');
-  readonly successMessage = Selector('.maintext').withText('Your Account Has Been Created');
-
+  readonly successMessage = Selector('.maintext, h1, .contentpanel').withText(/Account Has Been Created/i);
   // ===== Методы =====
 
   /** Открыть страницу регистрации */
@@ -59,6 +58,8 @@ export default class RegisterPage extends BasePage {
       .click(this.countrySelect)
       .click(this.countrySelect.find('option').withText('United Kingdom'))
       .typeText(this.loginNameInput, user.loginName)
+      .click(this.regionSelect)
+      .click(this.regionSelect.find('option').withText('Greater London'))
       .typeText(this.passwordInput, user.password)
       .typeText(this.passwordConfirmInput, user.password)
       .click(this.privacyCheckbox)
@@ -67,6 +68,6 @@ export default class RegisterPage extends BasePage {
 
   /** Проверить, что регистрация успешна */
   async isRegistrationSuccessful(): Promise<boolean> {
-    return await this.successMessage.exists;
-  }
+  return this.successMessage.exists;
+}
 }

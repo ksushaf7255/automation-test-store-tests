@@ -36,7 +36,7 @@ export default class LoginPage extends BasePage {
   }
 
   /** Проверить, что отображается ошибка */
-  async hasError(): Promise<boolean> {
-    return await this.errorMessage.exists;
-  }
+ async hasError(): Promise<boolean> {
+  return this.errorMessage.exists;
+}
 }
