@@ -48,4 +48,16 @@ export default class CartPage extends BasePage {
   async goToCheckout(): Promise<void> {
     await t.click(this.checkoutButton);
   }
+  /** Проверить, что корзина пуста */
+async isEmpty(): Promise<boolean> {
+  return this.emptyCartMessage.exists;
 }
+
+/** Получить название первого товара в корзине */
+async getFirstProductName(): Promise<string> {
+  const firstRow = this.cartRows.nth(0);
+  const nameCell = firstRow.find('td').nth(1);
+  return nameCell.innerText;
+}
+}
+

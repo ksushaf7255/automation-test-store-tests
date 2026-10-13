@@ -69,5 +69,9 @@ export default class RegisterPage extends BasePage {
   /** Проверить, что регистрация успешна */
   async isRegistrationSuccessful(): Promise<boolean> {
   return this.successMessage.exists;
-}
+  }
+   async hasError(): Promise<boolean> {
+    const errorMessage = Selector('.alert-error, .help-block, .alert-danger');
+    return errorMessage.exists;
+  }
 }
