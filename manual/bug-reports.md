@@ -28,3 +28,4 @@
 
 **Вложения:**
 Скриншот страницы с сообщением «The order you have requested could not be found!».
+![BUG-001 — Invoice not found](screenshots/bug-001-invoice.png)
