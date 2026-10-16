@@ -111,4 +111,3 @@ automation-test-store-tests/
 ## Автор
 
 ksushaf7255 — учебный проект по тестированию ПО
-
